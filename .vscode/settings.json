@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8d65642f-c3ba-4d77-946e-5c325caeacf2/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/battlesnake-joerivanarkel",
+    "appService.deploySubpath": "Api"
+}

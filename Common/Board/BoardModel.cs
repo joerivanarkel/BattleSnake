@@ -20,7 +20,7 @@ namespace Common.Board;
 //   ]
 // }
 
-public class Board
+public class BoardModel
 {
     public int Height { get; set; }
     public int Width { get; set; }
@@ -28,14 +28,14 @@ public class Board
     public List<Coordinate> Hazards { get; set; }
     public List<Snake> Snakes { get; set; }
 
-    public Board()
+    public BoardModel()
     {
-        Food = new List<Food>();
-        Hazards = new List<Hazard>();
+        Food = new List<Coordinate>();
+        Hazards = new List<Coordinate>();
         Snakes = new List<Snake>();
     }
 
-    public Board(int height, int width, List<Food> food, List<Hazard> hazards, List<Snake> snakes)
+    public BoardModel(int height, int width, List<Coordinate> food, List<Coordinate> hazards, List<Snake> snakes)
     {
         Height = height;
         Width = width;

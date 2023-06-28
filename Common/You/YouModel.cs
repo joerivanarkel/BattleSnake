@@ -21,7 +21,7 @@ namespace Common.You;
 //   }
 // }
 
-public class You
+public class YouModel
 {
     public string Id { get; set; }
     public string Name { get; set; }
@@ -34,13 +34,13 @@ public class You
     public string Squad { get; set; }
     public Customizations Customizations { get; set; }
 
-    public You()
+    public YouModel()
     {
         Body = new List<Coordinate>();
         Customizations = new Customizations();
     }
 
-    public You(string id, string name, int health, List<Coordinate> body, int latency, Coordinate head, int length, string shout, string squad, Customizations customizations)
+    public YouModel(string id, string name, int health, List<Coordinate> body, int latency, Coordinate head, int length, string shout, string squad, Customizations customizations)
     {
         Id = id;
         Name = name;

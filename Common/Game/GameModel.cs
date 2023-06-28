@@ -11,7 +11,7 @@ namespace Common.Game;
 //   "source": "league"
 // }
 
-public class Game
+public class GameModel
 {
     public string Id { get; set; }
     public Ruleset Ruleset { get; set; }
@@ -19,11 +19,11 @@ public class Game
     public int Timeout { get; set; }
     public string Source { get; set; }
 
-    public Game()
+    public GameModel()
     {
     }
 
-    public Game(string id, Ruleset ruleset, string map, int timeout, string source)
+    public GameModel(string id, Ruleset ruleset, string map, int timeout, string source)
     {
         Id = id;
         Ruleset = ruleset;
