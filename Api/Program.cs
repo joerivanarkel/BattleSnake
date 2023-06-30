@@ -1,5 +1,7 @@
 
 
+using Api.Controllers;
+using Common;
 using Common.Snake;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -23,12 +25,27 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 
+var snakeController = new SnakeController();
+
 app.MapGet("/snake", () =>
 {
-    return new SnakeAppearance("1", "joerivanarkel", "#069420", "mlh-gene", "mlh-gene", "0.0.1-beta");
-})
-.WithName("GetSnake")
-.WithOpenApi();
+    return snakeController.GetAppearance();
+});
+
+app.MapPost("/snake/start", (RequestModel model) =>
+{
+    return snakeController.Start(model);
+});
+
+app.MapPost("/snake/move", (RequestModel model) =>
+{
+    return snakeController.Move(model);
+});
+
+app.MapPost("/snake/end", (RequestModel model) =>
+{
+    return snakeController.End(model);
+});
 
 
 app.Run();

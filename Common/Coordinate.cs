@@ -14,4 +14,9 @@ public class Coordinate
         X = x;
         Y = y;
     }
+
+    public double Distance(Coordinate head)
+    {
+        return Math.Abs(head.X - X) + Math.Abs(head.Y - Y);
+    }
 }
