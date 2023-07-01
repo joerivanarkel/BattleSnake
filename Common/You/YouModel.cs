@@ -1,27 +1,36 @@
 namespace Common.You;
 
-// {
-//   "id": "totally-unique-snake-id",
-//   "name": "Sneky McSnek Face",
-//   "health": 54,
-//   "body": [
-//     {"x": 0, "y": 0}, 
-//     {"x": 1, "y": 0}, 
-//     {"x": 2, "y": 0}
-//   ],
-//   "latency": "123",
-//   "head": {"x": 0, "y": 0},
-//   "length": 3,
-//   "shout": "why are we shouting??",
-//   "squad": "1",
-//   "customizations":{
-//     "color":"#26CF04",
-//     "head":"smile",
-//     "tail":"bolt"
-//   }
-// }
+using Common.Game;
 
+/// <summary>
+/// Represents the player's snake in the game.
+/// </summary>
+/// 
+/// <remarks>
+/// This is the input JSON for a snake: <br/>
+/// {<br/>
+///  "id": "totally-unique-snake-id",<br/>
+///  "name": "Sneky McSnek Face",<br/>
+///  "health": 54,<br/>
+///  "body": [<br/>
+///    {"x": 0, "y": 0}, <br/>
+///    {"x": 1, "y": 0}, <br/>
+///    {"x": 2, "y": 0}<br/>
+///  ],<br/>
+///  "latency": "123",<br/>
+///  "head": {"x": 0, "y": 0},<br/>
+///  "length": 3,<br/>
+///  "shout": "why are we shouting??",<br/>
+///  "squad": "1",<br/>
+///  "customizations":{<br/>
+///    "color":"#26CF04",<br/>
+///    "head":"smile",<br/>
+///    "tail":"bolt"<br/>
+///  }<br/>
+/// }<br/>
+/// </remarks>
 public class YouModel
+
 {
     public string Id { get; set; }
     public string Name { get; set; }

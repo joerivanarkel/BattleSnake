@@ -1,5 +1,8 @@
-namespace Common;
+namespace Common.Game;
 
+/// <summary>
+/// Represents a coordinate in a two-dimensional space.
+/// </summary>
 public class Coordinate
 {
     public int X { get; set; }
@@ -15,8 +18,8 @@ public class Coordinate
         Y = y;
     }
 
-    public double Distance(Coordinate head)
+    public double Distance(Coordinate coord)
     {
-        return Math.Abs(head.X - X) + Math.Abs(head.Y - Y);
+        return Math.Abs(coord.X - X) + Math.Abs(coord.Y - Y);
     }
 }

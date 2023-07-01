@@ -1,25 +1,35 @@
 namespace Common.Board;
 
-// {
-//   "height": 11,
-//   "width": 11,
-//   "food": [
-//     {"x": 5, "y": 5}, 
-//     {"x": 9, "y": 0}, 
-//     {"x": 2, "y": 6}
-//   ],
-//   "hazards": [
-//     {"x": 0, "y": 0}, 
-//     {"x": 0, "y": 1}, 
-//     {"x": 0, "y": 2}
-//   ],
-//   "snakes": [
-//     {"id": "snake-one", ... },
-//     {"id": "snake-two", ... },
-//     {"id": "snake-three", ... }
-//   ]
-// }
+using Common.Game;
 
+/// <summary>
+/// Represents the game board model, including its dimensions, food locations, hazards, and snakes.
+/// </summary>
+
+/// <remarks>
+/// This is the input JSON for a board: <br/>
+/// <code>
+/// {<br/>
+///  "height": 11,<br/>
+///  "width": 11,<br/>
+///  "food": [<br/>
+///    {"x": 5, "y": 5}, <br/>
+///    {"x": 9, "y": 0}, <br/>
+///    {"x": 2, "y": 6}<br/>
+///  ],<br/>
+///  "hazards": [<br/>
+///    {"x": 0, "y": 0}, <br/>
+///    {"x": 0, "y": 1}, <br/>
+///    {"x": 0, "y": 2}<br/>
+///  ],<br/>
+///  "snakes": [<br/>
+///    {"id": "snake-one", ... },<br/>
+///    {"id": "snake-two", ... },<br/>
+///    {"id": "snake-three", ... }<br/>
+///  ]<br/>
+/// }<br/>
+/// </code>
+/// </remarks>
 public class BoardModel
 {
     public int Height { get; set; }

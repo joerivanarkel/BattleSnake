@@ -1,14 +1,22 @@
 namespace Common.Snake;
 
-// {
-//   "apiversion": "1",
-//   "author": "joerivanarkel",
-//   "color": "#069420",
-//   "head": "mlh-gene",
-//   "tail": "mlh-gene",
-//   "version": "0.0.1-beta"
-// }
 
+
+/// <summary>
+/// Represents the appearance of a snake in the BattleSnake game.
+/// </summary>
+
+/// <remarks>
+/// This is the input JSON for a snake's appearance: <br/>
+/// {<br/>
+///  "apiversion": "1",<br/>
+///  "author": "joerivanarkel",<br/>
+///  "color": "#069420",<br/>
+///  "head": "mlh-gene",<br/>
+///  "tail": "mlh-gene",<br/>
+///  "version": "0.0.1-beta"<br/>
+/// }<br/>
+/// </remarks>
 public class SnakeAppearance
 {
     public string Apiversion { get; set; }

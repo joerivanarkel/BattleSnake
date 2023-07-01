@@ -1,10 +1,19 @@
 namespace Common.You;
 
-//   "customizations":{
-//     "color":"#26CF04",
-//     "head":"smile",
-//     "tail":"bolt"
-//   }
+
+
+/// <summary>
+/// Represents the customizations for a BattleSnake.
+/// </summary>
+
+/// <remarks>
+/// This is the input JSON for customizations: <br/>
+/// "customizations":{<br/>
+///     "color":"#26CF04",<br/>
+///     "head":"smile",<br/>
+///     "tail":"bolt"<br/>
+/// }<br/>
+/// </remarks>
 
 public class Customizations
 {
