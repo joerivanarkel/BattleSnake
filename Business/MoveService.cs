@@ -7,7 +7,7 @@ namespace Business;
 public class MoveService
 {
     public RequestModel Request { get; set; }
-    public CollisionService CollisionService { get; set; }
+    public CollisionService CollisionService { get; set; } = new();
 
     public MoveService(RequestModel request)
     {
@@ -40,10 +40,8 @@ public class MoveService
         {
             moveResponse = new MoveResponse("down", "I'm going down!");
         }
-
-        CollisionService = new CollisionService(Request, moveResponse);
         
-        return CollisionService.CheckCollision() ? EmptyMove() : moveResponse;
+        return CollisionService.CheckCollision(moveResponse, Request) ? EmptyMove() : moveResponse;
     }
 
     private Coordinate GetClosestFood(List<Coordinate> foodList, Coordinate head)
@@ -68,29 +66,25 @@ public class MoveService
     {
         MoveResponse moveResponse = new MoveResponse("up", "I'm going up!");
 
-        CollisionService = new CollisionService(Request, moveResponse);
-        if(!CollisionService.CheckCollision())
+        if(!CollisionService.CheckCollision(moveResponse, Request))
         {
             return moveResponse;
         }
 
         moveResponse = new MoveResponse("right", "I'm going right!");
-        CollisionService = new CollisionService(Request, moveResponse);
-        if(!CollisionService.CheckCollision())
+        if(!CollisionService.CheckCollision(moveResponse, Request))
         {
             return moveResponse;
         }
 
         moveResponse = new MoveResponse("left", "I'm going left!");
-        CollisionService = new CollisionService(Request, moveResponse);
-        if(!CollisionService.CheckCollision())
+        if(!CollisionService.CheckCollision(moveResponse, Request))
         {
             return moveResponse;
         }
 
         moveResponse = new MoveResponse("down", "I'm going down!");
-        CollisionService = new CollisionService(Request, moveResponse);
-        if(!CollisionService.CheckCollision())
+        if(!CollisionService.CheckCollision(moveResponse, Request))
         {
             return moveResponse;
         }

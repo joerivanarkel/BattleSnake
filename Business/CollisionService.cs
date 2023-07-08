@@ -6,14 +6,15 @@ namespace Business;
 
 public class CollisionService
 {
-    public Coordinate NextMove { get; set; }
+    private Coordinate NextMove { get; set; }
+    private RequestModel Request { get; set; }
 
-    public RequestModel Request { get; set; }
-
-    public CollisionService(RequestModel request, MoveResponse moveResponse)
+    public bool CheckCollision(MoveResponse moveResponse, RequestModel request)
     {
-        Request = request;
         NextMove = GetNextMove(moveResponse);
+        Request = request;
+
+        return CheckWallCollision() || CheckSelfCollision() || CheckOtherSnakeCollision();
     }
 
     private Coordinate GetNextMove(MoveResponse moveResponse)
@@ -38,11 +39,6 @@ public class CollisionService
         }
 
         return next;
-    }
-
-    public bool CheckCollision()
-    {
-        return CheckWallCollision() || CheckSelfCollision() || CheckOtherSnakeCollision();
     }
 
     private bool CheckWallCollision()
