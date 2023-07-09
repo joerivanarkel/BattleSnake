@@ -14,4 +14,12 @@ public class RequestModel
     public BoardModel board  { get; set; } = default!;
     public YouModel you { get; set; } = default!;
 
+    public RequestModel(GameModel game, int turn, BoardModel board, YouModel you)
+    {
+        this.game = game;
+        this.turn = turn;
+        this.board = board;
+        this.you = you;
+    }
+
 }
