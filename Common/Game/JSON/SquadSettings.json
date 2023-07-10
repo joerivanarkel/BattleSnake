@@ -1,0 +1,8 @@
+{
+  "squad": {
+    "allowBodyCollisions": false,
+    "sharedElimination": false,
+    "sharedHealth": false,
+    "sharedLength": false
+  }
+}

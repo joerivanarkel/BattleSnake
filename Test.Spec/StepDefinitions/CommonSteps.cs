@@ -37,10 +37,18 @@ public class CommonSteps
             // TODO: Use the requestModel object in the test
             RequestModel requestModel = default!;
 
-            if(wallCollision) ;
-            if(selfCollision) ;
-            if(otherCollision); 
-            else requestModel = RequestModelDummyData.CreateRequestModel();
+            switch (true)
+            {
+                case bool b when wallCollision:
+                    continue;
+                case bool b when selfCollision:
+                    continue;
+                case bool b when otherCollision:
+                    continue;
+                default:
+                    requestModel = RequestModelDummyData.CreateRequestModel();
+                    break;
+            }
 
             _scenarioContext.Add(name, requestModel);
         }

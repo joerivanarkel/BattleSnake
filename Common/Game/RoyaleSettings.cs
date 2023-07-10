@@ -1,19 +1,8 @@
+using Common.Game.Interfaces;
+
 namespace Common.Game;
 
-
-
-/// <summary>
-/// Represents the settings for a BattleSnake Royale game.
-/// </summary>
-
-/// <remarks>
-/// This is the input JSON for a Royale game: <br/>
-///"royale": {<br/>
-///     "shrinkEveryNTurns": 0 <br/>
-/// }, <br/>
-/// </remarks>
-
-public class RoyaleSettings
+public class RoyaleSettings : IRoyaleSettings
 
 {
     public int shrinkEveryNTurns { get; set; }
@@ -27,3 +16,4 @@ public class RoyaleSettings
         this.shrinkEveryNTurns = shrinkEveryNTurns;
     }
 }
+

@@ -1,9 +1,8 @@
 namespace Common.Game;
 
-/// <summary>
-/// Represents a coordinate in a two-dimensional space.
-/// </summary>
-public class Coordinate
+using Common.Game.Interfaces;
+
+public class Coordinate : ICoordinate
 {
     public int X { get; set; }
     public int Y { get; set; }

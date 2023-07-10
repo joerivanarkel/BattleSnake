@@ -1,0 +1,16 @@
+{
+  "settings": {
+    "foodSpawnChance": 25,
+    "minimumFood": 1,
+    "hazardDamagePerTurn": 14,
+    "royale": {
+      "shrinkEveryNTurns": 5
+    },
+    "squad": {
+      "allowBodyCollisions": true,
+      "sharedElimination": true,
+      "sharedHealth": true,
+      "sharedLength": true
+    }
+  }
+}

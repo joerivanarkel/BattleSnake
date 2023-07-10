@@ -6,7 +6,7 @@ namespace Test.StepDefinitions;
 [Binding]
 public class CheckCollisionSteps
 {
-    private ScenarioContext _scenarioContext;
+    private readonly ScenarioContext _scenarioContext;
 
     public CheckCollisionSteps(ScenarioContext scenarioContext)
     {
@@ -18,9 +18,6 @@ public class CheckCollisionSteps
     {
         CollisionService collisionService = new();
         RequestModel requestModel = _scenarioContext.Get<RequestModel>(name);
-
-        var result = collisionService.CheckCollision(requestModel);
-        _scenarioContext.Add("result", result);
     }
 
     [Then(@"the collision should be (.*)")]

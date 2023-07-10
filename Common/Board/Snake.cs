@@ -2,35 +2,9 @@ namespace Common.Board;
 
 using Common.You;
 using Common.Game;
+using Common.Board.Interfaces;
 
-/// <summary>
-/// Represents a snake on the game board.
-/// </summary>
-
-/// <remarks>
-/// This is the input JSON for a snake: <br/>
-/// { <br/>
-///   "id": "totally-unique-snake-id", <br/>
-///   "name": "Sneky McSnek Face", <br/>
-///   "health": 54, <br/>
-///   "body": [ <br/>
-///     {"x": 0, "y": 0},  <br/>
-///     {"x": 1, "y": 0},  <br/>
-///     {"x": 2, "y": 0} <br/>
-///   ], <br/>
-///   "latency": "123", <br/>
-///   "head": {"x": 0, "y": 0}, <br/>
-///   "length": 3, <br/>
-///   "shout": "why are we shouting??", <br/>
-///   "squad": "1", <br/>
-///   "customizations":{ <br/>
-///     "color":"#26CF04", <br/>
-///    "head":"smile", <br/>
-///     "tail":"bolt" <br/>
-///   } <br/>
-/// } <br/>
-/// </remarks>
-public class Snake
+public class Snake : ISnake
 {
     public string Id { get; set; }
     public string Name { get; set; }
