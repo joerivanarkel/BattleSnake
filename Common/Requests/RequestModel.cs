@@ -1,18 +1,16 @@
+using Common.Game;
+using Common.Board;
+using Common.You;
+using Common.Requests.Interfaces;
+
 namespace Common.Requests;
 
-using Common.Board;
-using Common.Game;
-using Common.You;
-
-/// <summary>
-/// Represents a request sent by the Battlesnake server.
-/// </summary>
-public class RequestModel
+public class RequestModel : IRequestModel
 {
-    public GameModel game { get; set; } = default!;
-    public int turn { get; set; } = default!;
-    public BoardModel board  { get; set; } = default!;
-    public YouModel you { get; set; } = default!;
+    public GameModel game { get; set; }
+    public int turn { get; set; }
+    public BoardModel board  { get; set; }
+    public YouModel you { get; set; }
 
     public RequestModel(GameModel game, int turn, BoardModel board, YouModel you)
     {
@@ -21,5 +19,4 @@ public class RequestModel
         this.board = board;
         this.you = you;
     }
-
 }

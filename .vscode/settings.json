@@ -2,5 +2,9 @@
   "appService.defaultWebAppToDeploy": "/subscriptions/8d65642f-c3ba-4d77-946e-5c325caeacf2/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/battlesnake-joerivanarkel",
   "appService.preDeployTask": "publish-release",
   "appService.deploySubpath": "Api/bin/Release/net7.0/publish",
-  "dotnet.defaultSolution": "BattleSnake.sln"
+  "dotnet.defaultSolution": "BattleSnake.sln",
+  "material-icon-theme.folders.associations": {
+    "Test.Spec": "Test",
+    "JsonExamples": "Json",
+  }
 }

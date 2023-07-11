@@ -1,7 +1,7 @@
-namespace Common.Board;
-
 using Common.Game;
 using Common.Board.Interfaces;
+
+namespace Common.Board;
 
 public class BoardModel : IBoardModel
 {

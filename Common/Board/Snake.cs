@@ -1,8 +1,8 @@
-namespace Common.Board;
-
 using Common.You;
 using Common.Game;
 using Common.Board.Interfaces;
+
+namespace Common.Board;
 
 public class Snake : ISnake
 {
@@ -16,12 +16,6 @@ public class Snake : ISnake
     public string Shout { get; set; }
     public string Squad { get; set; }
     public Customizations Customizations { get; set; }
-
-    public Snake()
-    {
-        Body = new List<Coordinate>();
-        Customizations = new Customizations();
-    }
 
     public Snake(string id, string name, int health, List<Coordinate> body, int latency, Coordinate head, int length, string shout, string squad, Customizations customizations)
     {

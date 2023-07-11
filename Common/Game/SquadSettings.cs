@@ -1,6 +1,6 @@
-namespace Common.Game;
-
 using Common.Game.Interfaces;
+
+namespace Common.Game;
 
 public class SquadSettings : ISquadSettings
 {

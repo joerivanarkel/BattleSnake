@@ -1,6 +1,6 @@
-namespace Common.Board.Interfaces;
-
 using Common.Game;
+
+namespace Common.Board.Interfaces;
 
 public interface IBoardModel
 {

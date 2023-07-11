@@ -1,15 +1,11 @@
-namespace Common.Game;
-
 using Common.Game.Interfaces;
+
+namespace Common.Game;
 
 public class Coordinate : ICoordinate
 {
     public int X { get; set; }
     public int Y { get; set; }
-
-    public Coordinate()
-    {
-    }
 
     public Coordinate(int x, int y)
     {
