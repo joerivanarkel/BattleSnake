@@ -1,15 +1,17 @@
 using Common.Board;
 using Common.Game;
+using Common.Game.Interfaces;
 using Common.Requests;
+using Common.Requests.Interfaces;
 
-namespace Business;
+namespace Application;
 
 public class CollisionService
 {
-    private Coordinate NextMove { get; set; }
-    private RequestModel Request { get; set; }
+    private ICoordinate NextMove { get; set; }
+    private IRequestModel Request { get; set; }
 
-    public bool CheckCollision(MoveResponse moveResponse, RequestModel request)
+    public bool CheckCollision(IMoveResponse moveResponse, IRequestModel request)
     {
         NextMove = GetNextMove(moveResponse);
         Request = request;
@@ -17,10 +19,10 @@ public class CollisionService
         return CheckWallCollision() || CheckSelfCollision() || CheckOtherSnakeCollision();
     }
 
-    private Coordinate GetNextMove(MoveResponse moveResponse)
+    private ICoordinate GetNextMove(IMoveResponse moveResponse)
     {
-        Coordinate head = Request.you.Head;
-        Coordinate next = head;
+        ICoordinate head = Request.you.Head;
+        ICoordinate next = head;
 
         switch (moveResponse.Move)
         {

@@ -1,6 +1,6 @@
-using Business;
+using Application;
 using Common.Requests;
-using Common.Snake;
+using Common.Requests.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -40,7 +40,7 @@ public class SnakeController : ControllerBase
     /// <param name="model"> The request model containing the data of the BattleSnake game. </param>
     /// <returns> A MoveResponse object containing the direction the snake should move in.  </returns>
     [HttpPost("move")]
-    public MoveResponse Move(RequestModel model)
+    public IMoveResponse Move(RequestModel model)
     {
         MoveService moveService = new(model);
         return moveService.CalculateMove().Result;

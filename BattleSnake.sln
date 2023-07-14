@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{53A7E3B5-2A88-46D1-A816-E0272E20B55E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{ECA1FAEE-30CC-4475-9321-94E5114AC9BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{ECA1FAEE-30CC-4475-9321-94E5114AC9BD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{E1006D56-4F62-4F28-9753-B200EA4DABC5}"
 EndProject
@@ -45,11 +45,11 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D854B1C0-66B1-4F82-B9FF-4548D574D03D}
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C8E5B544-9AB7-4294-BBB8-51D398D5945B} = {E1006D56-4F62-4F28-9753-B200EA4DABC5}
 		{AAC38FA9-BF25-447A-B9AA-A53169CCA81B} = {E1006D56-4F62-4F28-9753-B200EA4DABC5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D854B1C0-66B1-4F82-B9FF-4548D574D03D}
 	EndGlobalSection
 EndGlobal

@@ -1,5 +1,7 @@
 using Common.Board;
+using Common.Board.Interfaces;
 using Common.Game;
+using Common.Game.Interfaces;
 using Common.Requests;
 using Common.You;
 
@@ -38,20 +40,20 @@ public static class RequestModelDummyData
             new BoardModel(
                 10,
                 10,
-                new List<Coordinate>() {
+                new List<ICoordinate>() {
                     new Coordinate(1, 1),
                     new Coordinate(1, 2),
                     new Coordinate(1, 3),
                 },
-                new List<Coordinate>() {
+                new List<ICoordinate>() {
                     new Coordinate(10, 10),
                 },
-                new List<Snake>() {
+                new List<ISnake>() {
                     new Snake(
                         "snakeId",
                         "name",
                         100,
-                        new List<Coordinate> () {
+                        new List<ICoordinate> () {
                             new Coordinate(1, 1),
                             new Coordinate(1, 2),
                             new Coordinate(1, 3),
@@ -73,7 +75,7 @@ public static class RequestModelDummyData
                 "snakeId",
                 "name",
                 100,
-                new List<Coordinate>() {
+                new List<ICoordinate>() {
                     new Coordinate(1, 1),
                     new Coordinate(1, 2),
                     new Coordinate(1, 3),

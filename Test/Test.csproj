@@ -22,9 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Business\Application.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />
     <ProjectReference Include="..\Api\Api.csproj" />
-    <ProjectReference Include="..\Business\Business.csproj" />
     <ProjectReference Include="..\Test.Spec\Test.Spec.csproj" />
   </ItemGroup>
 

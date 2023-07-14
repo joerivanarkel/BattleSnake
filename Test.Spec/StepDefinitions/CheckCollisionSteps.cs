@@ -1,4 +1,5 @@
-﻿using Business;
+﻿using System.Net.Mime;
+using Application;
 using Common.Requests;
 
 namespace Test.StepDefinitions;

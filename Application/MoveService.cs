@@ -1,28 +1,29 @@
 using Common;
-using Common.Game;
+using Common.Game.Interfaces;
 using Common.Requests;
+using Common.Requests.Interfaces;
 
-namespace Business;
+namespace Application;
 
 public class MoveService
 {
-    public RequestModel Request { get; set; }
+    public IRequestModel Request { get; set; }
     public CollisionService CollisionService { get; set; } = new();
 
-    public MoveService(RequestModel request)
+    public MoveService(IRequestModel request)
     {
         Request = request;
     }
 
-    public async Task<MoveResponse> CalculateMove()
+    public async Task<IMoveResponse> CalculateMove()
     {
-        Coordinate head = Request.you.Head;
-        Coordinate food = GetClosestFood(Request.board.Food, head);
+        ICoordinate head = Request.you.Head;
+        ICoordinate food = GetClosestFood(Request.board.Food, head);
 
         int xDiff = food.X - head.X;
         int yDiff = food.Y - head.Y;
 
-        MoveResponse moveResponse = new MoveResponse("up", "I'm going up!");
+        IMoveResponse moveResponse = new MoveResponse("up", "I'm going up!");
 
         if (xDiff > 0)
         {
@@ -44,12 +45,12 @@ public class MoveService
         return CollisionService.CheckCollision(moveResponse, Request) ? EmptyMove() : moveResponse;
     }
 
-    private Coordinate GetClosestFood(List<Coordinate> foodList, Coordinate head)
+    private ICoordinate GetClosestFood(List<ICoordinate> foodList, ICoordinate head)
     {
-        Coordinate closestFood = foodList[0];
+        ICoordinate closestFood = foodList[0];
         double closestDistance = head.Distance(closestFood);
 
-        foreach (Coordinate coordinate in foodList)
+        foreach (ICoordinate coordinate in foodList)
         {
             double distance = head.Distance(coordinate);
             if (distance < closestDistance)
