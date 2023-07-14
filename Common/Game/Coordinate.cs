@@ -13,7 +13,7 @@ public class Coordinate : ICoordinate
         Y = y;
     }
 
-    public double Distance(Coordinate coord)
+    public double Distance(ICoordinate coord)
     {
         return Math.Abs(coord.X - X) + Math.Abs(coord.Y - Y);
     }

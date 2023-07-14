@@ -5,7 +5,7 @@ namespace Common.Game;
 public class GameModel : IGameModel
 {
     public string Id { get; set; }
-    public Ruleset Ruleset { get; set; }
+    public IRuleset Ruleset { get; set; }
     public string Map { get; set; }
     public int Timeout { get; set; }
     public string Source { get; set; }

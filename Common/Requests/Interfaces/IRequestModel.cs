@@ -1,13 +1,13 @@
-using Common.Board;
-using Common.You;
-using Common.Game;
+using Common.Board.Interfaces;
+using Common.You.Interfaces;
+using Common.Game.Interfaces;
 
 namespace Common.Requests.Interfaces;
 
 public interface IRequestModel
 {
-    GameModel game { get; set; }
+    IGameModel game { get; set; }
     int turn { get; set; }
-    BoardModel board { get; set; }
-    YouModel you { get; set; }
+    IBoardModel board { get; set; }
+    IYouModel you { get; set; }
 }

@@ -1,4 +1,4 @@
-using Common.Game;
+using Common.Game.Interfaces;
 using Common.Board.Interfaces;
 
 namespace Common.Board;
@@ -7,18 +7,11 @@ public class BoardModel : IBoardModel
 {
     public int Height { get; set; }
     public int Width { get; set; }
-    public List<Coordinate> Food { get; set; }
-    public List<Coordinate> Hazards { get; set; }
-    public List<Snake> Snakes { get; set; }
+    public List<ICoordinate> Food { get; set; }
+    public List<ICoordinate> Hazards { get; set; }
+    public List<ISnake> Snakes { get; set; }
 
-    public BoardModel()
-    {
-        Food = new List<Coordinate>();
-        Hazards = new List<Coordinate>();
-        Snakes = new List<Snake>();
-    }
-
-    public BoardModel(int height, int width, List<Coordinate> food, List<Coordinate> hazards, List<Snake> snakes)
+    public BoardModel(int height, int width, List<ICoordinate> food, List<ICoordinate> hazards, List<ISnake> snakes)
     {
         Height = height;
         Width = width;

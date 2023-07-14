@@ -1,4 +1,4 @@
-using Common.Game;
+using Common.Game.Interfaces;
 
 namespace Common.Board.Interfaces;
 
@@ -6,7 +6,7 @@ public interface IBoardModel
 {
     int Height { get; set; }
     int Width { get; set; }
-    List<Coordinate> Food { get; set; }
-    List<Coordinate> Hazards { get; set; }
-    List<Snake> Snakes { get; set; }
+    List<ICoordinate> Food { get; set; }
+    List<ICoordinate> Hazards { get; set; }
+    List<ISnake> Snakes { get; set; }
 }
